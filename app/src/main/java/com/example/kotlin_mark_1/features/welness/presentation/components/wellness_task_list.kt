@@ -1,7 +1,6 @@
 package com.example.kotlin_mark_1.features.welness.presentation.components
 
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier

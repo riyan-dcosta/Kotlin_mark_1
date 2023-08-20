@@ -12,6 +12,7 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.kotlin_mark_1.app.anotationTypes.DarkAndLightMode
 import com.example.kotlin_mark_1.features.welness.presentation.pages.Wellness
 import com.example.kotlin_mark_1.ui.theme.Kotlin_mark_1Theme
 
@@ -37,7 +38,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Preview
+@DarkAndLightMode
 @Composable
 fun GoToScreenButtons() {
     Column(
