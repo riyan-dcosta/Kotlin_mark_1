@@ -16,9 +16,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.Button
+import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -36,22 +38,29 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.rememberNavController
 import com.example.kotlin_mark_1.R
 import com.example.kotlin_mark_1.ui.theme.Kotlin_mark_1Theme
 
 @Composable
 fun HomePage() {
-    var showOnBoarding by rememberSaveable { mutableStateOf(true) }
+//    var showOnBoarding by rememberSaveable { mutableStateOf(true) }
+    val navController = rememberNavController()
     Kotlin_mark_1Theme {
         Surface(
             color = MaterialTheme.colorScheme.background
         ) {
-            if (showOnBoarding) {
-                OnBoarding {
-                    showOnBoarding = !showOnBoarding
+            Column {
+                Button(onClick = { navController.navigate("wellness") }) {
+                    Text(text = "Wellness Page")
+
                 }
-            } else {
-                ProfilePage()
+                ElevatedButton(onClick = { navController.navigate("on-boarding") }) {
+                    Text(text = "OnBoarding Page")
+                }
+                OutlinedButton(onClick = { navController.navigate("profile") }) {
+                    Text(text = "Profile Page")
+                }
             }
         }
     }

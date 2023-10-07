@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.kotlin_mark_1"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.kotlin_mark_1"
@@ -40,7 +40,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.4.8"
     }
     packaging {
         resources {
@@ -52,6 +52,10 @@ android {
 dependencies {
     val lifecycle_version = "2.6.1"
     val arch_version = "2.2.0"
+    val nav_version = "2.7.0"
+
+//    Compose Navigation
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
